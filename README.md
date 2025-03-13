@@ -23,6 +23,7 @@ SMaterial_settingは、アニメーションを省き手動でのパラメータ
 ## 調整項目、パラメータ
 ### SMaterial_animation
  アニメーションマテリアルには調整項目が10個ある
+![anim_insp](https://github.com/user-attachments/assets/6b89e99b-4023-4838-8f32-2ba8614cf669)
 
 #### gamma
 構造色の強度を調整できる。
@@ -30,14 +31,11 @@ SMaterial_settingは、アニメーションを省き手動でのパラメータ
 #### IriS
 虹色素胞モデルの大きさを指定可能
 色素胞モデルの大きさに対応させているため基本調整不要
-
 #### smooth, metal
 モデルの質感がどのくらい滑らかか(smooth)、金属質か(metallic)を指定可能
-
 #### Transparency, Transparency_White
 シェーダの透明度を指定可能
 Transparencyは色素胞と虹色素胞モデル部分の透明度に、Transparency_Whiteはそれ以外の白色部分の透明度に対応
-
 #### time_show～irido
 まず、設定しているアニメーションについて説明する。
 
@@ -49,15 +47,14 @@ Transparencyは色素胞と虹色素胞モデル部分の透明度に、Transpar
 
 ### SMaterial_setting()
  セッティングマテリアルには調整項目が13個あるが、前項に重複するものは省いて紹介する。
+![set_insp](https://github.com/user-attachments/assets/e0628276-dcfd-4b37-b199-c24f34158ebe)
 
 #### Center～Yellow
 それぞれ対応する色の色素胞の膨張収縮を制御可能。
 0が収縮時、1が膨張時に該当し、最大と最小で半径は10倍異なるようにしている
-
 #### Ring, DorsalStripe
 それぞれ対応する模様部分に位置する色素胞の膨張収縮を制御可能
 0が収縮時、1が膨張時に該当し、最大と最小で半径は10倍異なるようにしている
-
 #### D
 虹色素胞モデルにおける膜厚の変化を制御する値。
 膜厚は、0のときに最小、1のときに最大となるようにしている。
@@ -69,12 +66,13 @@ Transparencyは色素胞と虹色素胞モデル部分の透明度に、Transpar
 ちなみに、main_myMultilayer_2D()では、膜厚パラメータDの値を固定した2D画像を得ることができる。
 生成したCSVをUnityデータのcsvフォルダ内に移動させる。
  次に、Hierarchy内のCreate 3DTextureオブジェクトを有効にし、そのinspectorにあるスクリプトも有効にする↓
-
+![スクリーンショット 2025-03-13 112836](https://github.com/user-attachments/assets/279e95c6-2a67-489e-8e25-93ca7a28fcc2)
 ここで、対応しているStrucmap_create_usecsvを開き(クリックで開ける)、csvの場所とLUTの保存先を指定する。
 その後、保存しUnityに戻り、実行する(1番上の▷を押す)と3DLUTが生成される。
 
 ### 使用するLUTについて
  LUTフォルダ内には様々なLUTが保存されているが、使用するのはstrucmap_m3d8-N8-new2とする。
+ ![スクリーンショット 2025-03-13 120154](https://github.com/user-attachments/assets/bd5583a8-b73f-4590-8d03-20d567074be5)
 これは、dL=120-50nm, dH=160-80nmかつ平均値dL=95nm,dH=120nmを通るようガンマ補正し、タンパク質層の層数を8枚としたものに該当する(詳細は論文へ)
 また、シェーダ内でLUTを適用する際は、wrap modeをclampにする必要があるが、clamp時に起きる本LUT以外はclamp時にノイズが出てしまうので注意
 
