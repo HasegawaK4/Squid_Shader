@@ -1,5 +1,5 @@
 # イカの体色表現シェーダ
-![Uploading Thumbnail_20K1023_長谷川紘大.png…]()
+![Thumbnail_20K1023_長谷川紘大](https://github.com/user-attachments/assets/b8a0c500-24b2-44af-823b-4783752e251c)
 
 ## 概要
 イカの体色変化は、色素成分である色素胞と、構造色成分である虹色素胞がそれぞれ変化することで実現される。
