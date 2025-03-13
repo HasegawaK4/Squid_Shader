@@ -25,6 +25,7 @@ SMaterial_settingは、アニメーションを省き手動でのパラメータ
  アニメーションマテリアルには調整項目が10個ある
 ![anim_insp](https://github.com/user-attachments/assets/6b89e99b-4023-4838-8f32-2ba8614cf669)
 
+
 #### gamma
 構造色の強度を調整できる。
 構造色テクスチャに対しガンマ補正する際の乗数に対応
