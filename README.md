@@ -85,7 +85,7 @@ Transparencyは色素胞と虹色素胞モデル部分の透明度に, Transpare
 これは, dL=120-50nm, dH=160-80nmかつ平均値dL=95nm,dH=120nmを通るようガンマ補正し, タンパク質層の層数を8枚としたものに該当する(詳細は論文へ). 
 また, シェーダ内でLUTを適用する際は, wrap modeをclampにする必要があるが, clamp時に起きる本LUT以外はclamp時にノイズが出てしまうので注意. 
 
-##オブジェクト
+## オブジェクト
 イカのモデル以外のHierarchyにあるオブジェクトを説明. 
 
 ### Box Volume: Water
