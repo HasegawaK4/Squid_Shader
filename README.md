@@ -83,7 +83,9 @@ Transparencyは色素胞と虹色素胞モデル部分の透明度に, Transpare
  ![スクリーンショット 2025-03-13 120154](https://github.com/user-attachments/assets/bd5583a8-b73f-4590-8d03-20d567074be5)
  
 これは, dL=120-50nm, dH=160-80nmかつ平均値dL=95nm,dH=120nmを通るようガンマ補正し, タンパク質層の層数を8枚としたものに該当する(詳細は論文へ). 
-また, シェーダ内でLUTを適用する際は, wrap modeをclampにする必要があるが, clamp時に起きる本LUT以外はclamp時にノイズが出てしまうので注意. 
+
+また, シェーダ内でLUTを適用する際はwrap modeをclampにする必要があるが, このLUT以外ではclamp時にノイズが出てしまうので注意. 
+現在のSquid_LUT.pyではこのノイズは改善されるように修正済みなので、必要に応じて改めてLUT生成をしてほしい。
 
 ## オブジェクト
 イカのモデル以外のHierarchyにあるオブジェクトを説明. 
