@@ -69,18 +69,20 @@ Transparencyは色素胞と虹色素胞モデル部分の透明度に, Transpare
 
 ## 構造色ルックアップテーブル(LUT)
 ### LUTの生成
-まず, creatLUTフォルダ内のSquid_LUT.pyを開きmain_myMultilayer_3D()を実行し, CSVを生成(この作業はUnityでなくpythonで行う). 
-ちなみに, main_myMultilayer_2D()では, 膜厚パラメータDの値を固定した2D画像を得ることができる. 
-生成したCSVをUnityデータのcsvフォルダ内に移動させる. 
- 次に, Hierarchy内のCreate 3DTextureオブジェクトを有効にし, そのinspectorにあるスクリプトも有効にする↓
+まず, creatLUTフォルダ内のSquid_LUT.pyを開きmain_myMultilayer_3D()を実行し, CSVを出力する.
+この作業はUnityでなくpythonで行う. 
+(ちなみに, main_myMultilayer_2D()では, 膜厚パラメータDの値を固定した2D画像を得ることができる.) 
+生成したCSVデータは, Unityデータのcsvフォルダ内に移動させておく. 
+
+次に, Hierarchy内のCreate 3DTextureオブジェクトを有効にし, そのinspectorにあるスクリプトも有効にする↓
 ![スクリーンショット 2025-03-13 112836](https://github.com/user-attachments/assets/279e95c6-2a67-489e-8e25-93ca7a28fcc2)
 
 ここで, 対応しているStrucmap_create_usecsvを開き(クリックで開ける), csvの場所とLUTの保存先を指定する. 
 その後, 保存しUnityに戻り, 実行する(1番上の▷を押す)と3DLUTが生成される. 
 
 ### 使用するLUTについて
- LUTフォルダ内には様々なLUTが保存されているが, 使用するのはstrucmap_m3d8-N8-new2とする. 
- ![スクリーンショット 2025-03-13 120154](https://github.com/user-attachments/assets/bd5583a8-b73f-4590-8d03-20d567074be5)
+LUTフォルダ内には様々なLUTが保存されているが, 使用するのはstrucmap_m3d8-N8-new2とする. 
+![スクリーンショット 2025-03-13 120154](https://github.com/user-attachments/assets/bd5583a8-b73f-4590-8d03-20d567074be5)
  
 これは, dL=120-50nm, dH=160-80nmかつ平均値dL=95nm,dH=120nmを通るようガンマ補正し, タンパク質層の層数を8枚としたものに該当する(詳細は論文へ). 
 
